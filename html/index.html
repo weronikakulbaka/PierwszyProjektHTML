@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=latin-ext" rel="stylesheet">
+	<script src="js/funkcje.js"></script>
+	<script src="js/walidacja.js"></script>
+	<script src="js/slider.js"></script>
+</head>
+
+<body onload="currentSlide(1)">
+	<header>
+		<nav>
+			<button id="bContact" onclick="show(1)">Kontakt</button>
+			<button id="bProject" onclick="show(2); currentSlide(1)">Moje projekty</button>
+			<button id="bAbout" onclick="show(3)">O mnie</button>
+		</nav>
+		<h2>Weronika Kulbaka</h2>
+	</header>
+	<section id="main">
+		<p class="photo"><img src="images/INT_WomenInTECHCAMP_wrze%C5%9Bnia%2027,%202017_215.jpg" alt="Weronika Kulbaka"></p>
+		<article id="about">
+			<h3>O mnie</h3>
+			<p>Jestem studentką drugiego roku informatyki na Politechnice Lubelskiej. W 2016 roku byłam organizatorem IT Academic Day, rok póżniej zostałam wolontariuszem konferencji informatycznej CHECK IT, gdzie odpowiadałam za pomoc w punkcie rejestracyjnym, obsługę techniczną i logistyczną konferencji. W liceum stworzyłam własny projekt społeczny, który poprzez dobrą zabawę miał zachęcić dzieci do uczenia się fizyki. W ramach projektu otrzymałam certyfikat Project Management Fundamentals. </p>
+			<br>
+			<br>
+		</article>
+		<article id="myProject">
+			<h3>Moje projekty</h3>
+			<p class="project"> 8x8x8 LED CUBE </p>
+			<div class="slideshow-container">
+				<div class="mySlides fade">
+					<img src="images/IMG_20171111_164535.jpg" alt="photo1" style="width:100%">
+				</div>
+				<div class="mySlides fade">
+					<img src="images/IMG_20171111_184504.jpg" alt="photo2" style="width:100%">
+				</div>
+				<div class="mySlides fade">
+					<img src="images/IMG_20180224_213230.jpg" alt="photo3" style="width:100%">
+				</div>
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<br>
+			<div style="text-align:center">
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+				<span class="dot" onclick="currentSlide(3)"></span>
+			</div>
+			<br>
+			<br>
+		</article>
+		<article id="contact">
+			<h3>Kontakt</h3>
+			<p>Napisz do mnie</p>
+			<form method="post" novalidate action="mailto:weronika.wp@wp.pl" enctype="text/plain" onsubmit="return check()">
+				<div class="form-group">
+					<label for="name">Imię*</label>
+					<input type="text" name="name" id="name">
+					<span id="name-error" class="red"></span>
+				</div>
+				<div class="form-group">
+					<label for="email">E-mail*</label>
+					<input type="email" name="email" id="email">
+					<span id="email-error" class="red"></span>
+				</div>
+				<div class="form-group">
+					<label for="message">Wiadomość*</label>
+					<textarea name="message" id="message"></textarea>
+					<span id="text-error" class="red"></span>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="submit">
+					Wyślij
+				</button>
+				</div>
+			</form>
+		</article>
+		<article id="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d159938.90168376866!2d22.42368706522758!3d51.21824043995016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472257141e154061%3A0x5528ee7af6e8e95f!2sLublin!5e0!3m2!1spl!2spl!4v1528729221356" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</article>
+	</section>
+	<footer>
+		Weronika Kulbaka 2018 &copy;
+	</footer>
+</body>
+
+</html>
